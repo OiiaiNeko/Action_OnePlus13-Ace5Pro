@@ -207,8 +207,8 @@ jobs:
           git clone https://github.com/Kernel-SU/AnyKernel3 --depth=1
           curl -LO https://github.com/ShirkNeko/SukiSU_KernelPatch_patch/releases/download/0.11-beta/patch_linux
           curl -LO https://github.com/ShirkNeko/SukiSU_KernelPatch_patch/releases/download/0.11-beta/patch.rar
-          sudo apt-get install rar
-          sudo apt-get install unrar
+          sudo apt-get -y install rar
+          sudo apt-get -y install unrar
           unrar x patch.rar
           mv patch_linux ./patch
           rm -rf ./AnyKernel3/.git
