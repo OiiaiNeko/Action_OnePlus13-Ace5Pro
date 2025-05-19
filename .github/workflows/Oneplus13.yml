@@ -44,7 +44,7 @@ on:
         type: boolean
         default: true
       VFS_patch_ENABLED:
-        description: "添加 vfs 补丁（新钩子）？"
+        description: "添加vfs、lz4kd？"
         required: true
         type: choice
         options:
@@ -141,7 +141,6 @@ jobs:
         run: |
           cd kernel_workspace/kernel_platform/common
           cp ../../SukiSU_patch/hooks/syscall_hooks.patch ./
-          echo "正在打vfs补丁"
           patch -p1 -F 3 < syscall_hooks.patch
           cp ../../SukiSU_patch/other/zram/zram_patch/${{ github.event.inputs.KERNEL_VERSION }}/lz4kd.patch ./
           patch -p1 -F 3 < lz4kd.patch || true
