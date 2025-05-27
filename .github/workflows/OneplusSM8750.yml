@@ -12,7 +12,7 @@ on:
         required: true
         default: oneplus_13
         options:
-          - oneplus_13t
+          - oneplus_13
           - oneplus_13t
           - oneplus_ace5_pro
       CPUD:
